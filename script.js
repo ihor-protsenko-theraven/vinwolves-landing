@@ -1,13 +1,4 @@
 // ============================================
-// TELEGRAM BOT CONFIGURATION
-// ============================================
-const TELEGRAM_CONFIG = {
-    botToken: '7690861929:AAHOVWIaKk2a4fd7_6ybxNa8pOi6BJamrow',
-    chatId: '-1001113795475',
-    apiUrl: 'https://api.telegram.org/bot'
-};
-
-// ============================================
 // UTILITY FUNCTIONS
 // ============================================
 
@@ -59,38 +50,8 @@ function formatPhoneNumber(value) {
     return formatted;
 }
 
-/**
- * Send message to Telegram Bot
- * @param {string} name - User name
- * @param {string} phone - User phone
- * @returns {Promise} - Fetch promise
- */
-async function sendToTelegram(name, phone) {
-    const message = `🐺 *НОВА ЗАЯВКА З ЛЕНДІНГУ!*\n\n👤 *Ім'я:* ${name}\n📞 *Телефон:* ${phone}\n\n⏰ Час: ${new Date().toLocaleString('uk-UA')}`;
-
-    const url = `${TELEGRAM_CONFIG.apiUrl}${TELEGRAM_CONFIG.botToken}/sendMessage`;
-
-    const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            chat_id: TELEGRAM_CONFIG.chatId,
-            text: message,
-            parse_mode: 'Markdown'
-        })
-    });
-
-    if (!response.ok) {
-        throw new Error(`Telegram API error: ${response.status}`);
-    }
-
-    return response.json();
-}
-
 // ============================================
-// FORM HANDLING
+// FORM HANDLING (VERCEL FUNCTION)
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -140,10 +101,23 @@ document.addEventListener('DOMContentLoaded', function () {
         submitButton.innerHTML = '⏳ Відправка...';
 
         try {
-            // Send to Telegram
-            await sendToTelegram(name, phone);
+            // PROXY REQUEST TO VERCEL SERVERLESS FUNCTION
+            const response = await fetch('/api/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, phone })
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.message || 'Server error');
+            }
 
             // Success: Hide form and show success message
+            contactForm.reset(); // Reset form fields
             contactForm.style.display = 'none';
             successMessage.classList.add('show');
 
@@ -155,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
 
-            console.log('✅ Form submitted successfully:', { name, phone });
+            console.log('✅ Form submitted successfully via Vercel');
 
         } catch (error) {
             // Error handling
-            console.error('❌ Error sending to Telegram:', error);
+            console.error('❌ Error sending form:', error);
 
             alert('⚠️ Виникла помилка при відправці заявки. Будь ласка, спробуй ще раз або зателефонуй нам напряму.');
 
