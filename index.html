@@ -5,322 +5,432 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Приєднуйся до найтитулованішого клубу України з флаг-футболу! Перше тренування безкоштовно. Олімпійський вид спорту. Набір у Вінниці.">
+        content="Приєднуйся до найтитулованішого клубу України з флаг-футболу. Перше тренування безкоштовно. Набір у Вінниці для дітей і дорослих.">
     <meta name="keywords"
         content="флаг-футбол Вінниця, Вінницькі Вовки, flag football Ukraine, спортивна команда, набір у команду">
+    <meta name="theme-color" content="#0b0b0c">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Вінницькі Вовки — Набір у команду з флаг-футболу">
+    <meta property="og:title" content="Вінницькі Вовки — набір у команду з флаг-футболу">
     <meta property="og:description"
-        content="Твій шлях до Олімпіади починається у Вінниці. Перше тренування безкоштовно!">
+        content="Твій шлях у флаг-футбол починається у Вінниці. Перше тренування безкоштовно.">
     <meta property="og:type" content="website">
-    <meta name="google-site-verification" content="OqJDdaRbwYJyU_EcdY0crNXBLEAFfFJ56oO1ZXuPnL4" />
-    <title>Вінницькі Вовки — Набір у команду з флаг-футболу | Vinnytsia Wolves</title>
+    <meta name="google-site-verification" content="OqJDdaRbwYJyU_EcdY0crNXBLEAFfFJ56oO1ZXuPnL4">
+    <title>Вінницькі Вовки — набір у команду з флаг-футболу</title>
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap"
         rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="images/logo.ico">
-    <link rel="apple-touch-icon" href="images/logo.ico">
+    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="icon" type="image/x-icon" href="images/logo.ico">
+    <link rel="apple-touch-icon" href="images/logo.PNG">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="images/logo.PNG" alt="Вінницькі Вовки" class="logo-img">
-                    <span class="logo-text">Вінницькі Вовки</span>
-                </div>
-                <a href="tel:+380635744841" class="btn btn-phone">
-                    📞 Зателефонувати тренеру
-                </a>
-            </div>
+    <a class="skip-link" href="#main">Перейти до основного вмісту</a>
+
+    <header class="header" id="header">
+        <div class="container header-content">
+            <a href="#hero" class="logo" aria-label="Вінницькі Вовки — на початок сторінки">
+                <img src="images/logo.PNG" alt="" class="logo-img" width="52" height="52">
+                <span class="logo-copy">
+                    <strong>Вінницькі Вовки</strong>
+                    <small>Flag football club</small>
+                </span>
+            </a>
+
+            <nav class="header-nav" aria-label="Головна навігація">
+                <a href="#achievements">Досягнення</a>
+                <a href="#benefits">Про флаг-футбол</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <a href="tel:+380635744841" class="btn btn-outline btn-phone" aria-label="Зателефонувати тренеру">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                    <path d="M7.1 3.2 9.4 7a1.5 1.5 0 0 1-.2 1.8l-1.3 1.3a14 14 0 0 0 6 6l1.3-1.3a1.5 1.5 0 0 1 1.8-.2l3.8 2.3a1.5 1.5 0 0 1 .7 1.6l-.3 1.7a2 2 0 0 1-2 1.7C9.7 21.9 2.1 14.3 2.1 4.8a2 2 0 0 1 1.7-2l1.7-.3a1.5 1.5 0 0 1 1.6.7Z" />
+                </svg>
+                <span>Зателефонувати</span>
+            </a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <video class="hero-video" autoplay loop muted playsinline>
-            <source src="images/hero-video.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Приходь та тренуйся з Вінницькими Вовками
-                </h1>
-                <span style="font-size: 5rem">🏈</span>
-                <p class="hero-subtitle">
-                    Ми запрошуємо на тренування хлопців та дівчат від 9 до 99 років
-                </p>
-                <button class="btn btn-primary btn-large" onclick="scrollToForm()">
-                    Запишись на 1ше тренування 🐺
-                </button>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>↓</span>
-        </div>
-    </section>
+    <main id="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <video class="hero-video" autoplay loop muted playsinline preload="none" poster="images/banner-1.jpg"
+                aria-hidden="true">
+                <source data-src="images/hero-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-pattern" aria-hidden="true"></div>
 
-    <!-- Achievements Block -->
-    <section class="social-proof section-dark">
-        <div class="container">
-            <h2 class="section-title">Наші досягнення</h2>
-            <div class="achievements-grid">
-                <div class="achievement-item">
-                    <p class="achievement-text">30 років успішної підготовки спортсменів</p>
-                    <img src="images/achievement-1.jpg" alt="30 років історії" class="achievement-image">
-                </div>
-                <div class="achievement-item">
-                    <p class="achievement-text">Чемпіони України. Володарі Кубку України</p>
-                    <img src="images/achievement-2.jpg" alt="Чемпіони України" class="achievement-image">
-                </div>
-                <div class="achievement-item">
-                    <p class="achievement-text">Найбільший клуб з флаг-футболу України</p>
-                    <img src="images/achievement-3.jpg" alt="Найбільший клуб" class="achievement-image">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="benefits section-light">
-        <div class="container">
-            <h2 class="section-title">Чому флаг-футбол — це твій варіант?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏟️</div>
-                    <h3 class="benefit-title">Доступність</h3>
-                    <p class="benefit-text">
-                        Для тренувань та гри потрібно мати лише спортивний одяг, взуття та рукавички.
+            <div class="container hero-layout">
+                <div class="hero-content">
+                    <p class="eyebrow hero-eyebrow">
+                        <span class="live-dot" aria-hidden="true"></span>
+                        Набір у Вінниці відкрито
                     </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🛡️</div>
-                    <h3 class="benefit-title">Безконтактно = Безпечно</h3>
-                    <p class="benefit-text">
-                        Безконтактний спорт. Підходить для всіх — від школярів до IT-вців.
+                    <h1 class="hero-title" id="hero-title">
+                        Знайди свою силу.<br>
+                        <span>Приєднуйся до зграї.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Флаг-футбол для хлопців і дівчат від 9 років. Без досвіду, без жорстких зіткнень — із командою,
+                        яка навчить і підтримає.
                     </p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🏅</div>
-                    <h3 class="benefit-title">Лос-Анджелес 2028</h3>
-                    <p class="benefit-text">
-                        Флаг-футбол — спорт, який найшвидше зростає у світі та у 2028 р. дебютує на Олімпіаді.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Us -->
-    <section class="community section-dark">
-        <div class="container">
-            <h2 class="section-title">Тренуватись у 'Вінницьких вовках' — це:</h2>
-            <div class="why-us-list">
-                <div class="why-us-item">
-                    🇺🇦 Навчатись у тренерів збірної України
-                </div>
-                <div class="why-us-item">
-                    🏆 Грати та перемагати в Україні та Європі
-                </div>
-                <div class="why-us-item">
-                    🐺 Стати частиною 'вовчої' сім'ї
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lead Form -->
-    <section class="lead-form section-accent" id="form">
-        <div class="container">
-            <div class="form-wrapper">
-                <h2 class="section-title">Готовий спробувати? Перше тренування — на нас! 🎁</h2>
-                <p class="form-subtitle">
-                    Заповни форму, і тренер зателефонує тобі протягом доби.<br>
-                    Без зобов'язань. Без прихованих платежів. Просто приходь та відчуй.
-                </p>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name"></label><input type="text" id="name" name="name" class="form-input"
-                            placeholder="Твоє ім'я" required>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary btn-large" href="#form">
+                            Записатися безкоштовно
+                            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                                <path d="m9 5 7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a class="btn btn-ghost btn-large" href="#benefits">Дізнатися більше</a>
                     </div>
-                    <div class="form-group">
-                        <label for="phone"></label><input type="tel" id="phone" name="phone" class="form-input"
-                            placeholder="+380..." required>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-large btn-full">
-                        Відправити заявку 🐺
-                    </button>
-                    <p class="form-privacy">
-                        🔒 Твої дані бачить лише тренер. Ніякого спаму.
-                    </p>
-                </form>
-
-                <div class="success-message" id="successMessage">
-                    <div class="success-icon">🎉</div>
-                    <h3>Заявка полетіла тренеру!</h3>
-                    <p>Чекай дзвінка протягом доби. Готуйся до першого тренування — воно буде незабутнім! 🏈</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq section-light">
-        <div class="container">
-            <h2 class="section-title">Питання, які ти точно хочеш поставити</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Що таке флаг-футбол?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Флаг-футбол — це безконтактна версія американського футболу. Замість силових зіткнень гравці
-                            знімають прапорці з поясу суперника. Це динамічна командна гра, яка поєднує швидкість,
-                            тактику та стратегію.</p>
+                    <div class="hero-note">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                            <path d="m5 12 4 4L19 6" />
+                        </svg>
+                        Перше тренування — безкоштовно. Спорядження надамо.
                     </div>
                 </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Я ніколи не грав у футбол. Це проблема?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Ні.</strong> Більшість наших гравців ніколи раніше не грали у флаг-футбол. Ми навчимо
-                            всього — від базових правил до складних тактик. Головне — твоє бажання.</p>
+                <div class="hero-proof" aria-label="Ключові факти про клуб">
+                    <div class="proof-item">
+                        <strong>30</strong>
+                        <span>років спортивної історії</span>
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Скільки це коштує?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Перше тренування — безкоштовно.</strong> Далі — символічні клубні внески (оренда
-                            поля, обладнання). Деталі обговоримо особисто.</p>
+                    <div class="proof-item">
+                        <strong>№1</strong>
+                        <span>найбільший клуб України</span>
                     </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Де проходять тренування?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Вінниця, <a href="https://maps.app.goo.gl/BGMe148HAD4Cwvxc9" target="_blank"
-                                    style="color: var(--color-accent); text-decoration: none;">Стадіон школи №35
-                                    🗺️</a> (основна локація).</strong> З 2026 року будуть додані ще локації.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Який графік тренувань?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Графік тренувань залежить від вікової групи. Зазвичай це вівторок та четвер у вечірній час,
-                            субота та неділя у ранковий час. Детальніше розкажемо під час дзвінка.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Дівчата теж можуть грати?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p><strong>Звісно!</strong> Флаг-футбол — це для всіх. У нас є змішані команди, і ми вітаємо
-                            кожного, хто готовий стати частиною зграї.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>❓ Що брати з собою?</span>
-                        <span class="faq-toggle">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Спортивний одяг, кросівки, воду. Решту інвентарю для тренування ми забезпечимо.</p>
+                    <div class="proof-item">
+                        <strong>9–99</strong>
+                        <span>вік не обмежує гру</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Footer -->
+            <a class="scroll-cue" href="#achievements" aria-label="Перейти до досягнень">
+                <span>Гортай</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18">
+                    <path d="m5 9 7 7 7-7" />
+                </svg>
+            </a>
+        </section>
+
+        <section class="achievements section-dark" id="achievements">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow">Нам є чим пишатися</p>
+                        <h2 class="section-title">Команда, що знає<br>смак перемоги</h2>
+                    </div>
+                    <p class="section-lead">Ми не просто тренуємо — ми створюємо середовище, де новачки ростуть у
+                        спортсменів, а спортсмени стають чемпіонами.</p>
+                </div>
+
+                <div class="achievements-grid">
+                    <article class="achievement-card achievement-card-featured reveal">
+                        <img src="images/achievement-1.jpg" alt="Команда Вінницьких Вовків на стадіоні" width="1440"
+                            height="961" loading="lazy" decoding="async">
+                        <div class="achievement-shade"></div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">01</span>
+                            <h3>30 років готуємо сильних спортсменів</h3>
+                            <p>Досвід, перевірена методика й культура взаємної підтримки.</p>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card reveal">
+                        <img src="images/achievement-2.jpg" alt="Гравці Вінницьких Вовків із нагородами" width="1325"
+                            height="1321" loading="lazy" decoding="async">
+                        <div class="achievement-shade"></div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">02</span>
+                            <h3>Чемпіони та володарі Кубку України</h3>
+                        </div>
+                    </article>
+
+                    <article class="achievement-card reveal">
+                        <img src="images/achievement-3.jpg" alt="Велика команда Вінницьких Вовків" width="2048"
+                            height="1368" loading="lazy" decoding="async">
+                        <div class="achievement-shade"></div>
+                        <div class="achievement-content">
+                            <span class="achievement-number">03</span>
+                            <h3>Найбільший клуб із флаг-футболу в Україні</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits section-light" id="benefits">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <div>
+                        <p class="eyebrow eyebrow-dark">Твій спорт може бути іншим</p>
+                        <h2 class="section-title">Швидкість, стратегія<br>і командна гра</h2>
+                    </div>
+                    <p class="section-lead">Флаг-футбол — динамічна безконтактна версія американського футболу. Легко
+                        почати, складно відірватися.</p>
+                </div>
+
+                <div class="benefits-grid">
+                    <article class="benefit-card reveal">
+                        <div class="benefit-topline">
+                            <span class="benefit-index">01</span>
+                            <span class="benefit-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M4 19V9m16 10V5M8 19v-6m8 6V9m-4 10V5M2 19h20" /></svg>
+                            </span>
+                        </div>
+                        <h3>Доступний старт</h3>
+                        <p>Потрібні лише спортивний одяг, зручне взуття та бажання спробувати. Решту інвентарю ми
+                            надамо.</p>
+                    </article>
+
+                    <article class="benefit-card reveal">
+                        <div class="benefit-topline">
+                            <span class="benefit-index">02</span>
+                            <span class="benefit-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 2.8 8.3 7 10 4.2-1.7 7-5.5 7-10V6l-7-3Z" /><path d="m9 12 2 2 4-5" /></svg>
+                            </span>
+                        </div>
+                        <h3>Без жорстких зіткнень</h3>
+                        <p>Замість захватів гравці знімають прапорець із поясу суперника. Безпечніше, але так само
+                            драйвово.</p>
+                    </article>
+
+                    <article class="benefit-card benefit-card-accent reveal">
+                        <div class="benefit-topline">
+                            <span class="benefit-index">03</span>
+                            <span class="benefit-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 0 1-10 0V4Z" /><path d="M7 6H4v2a4 4 0 0 0 4 4m9-6h3v2a4 4 0 0 1-4 4" /></svg>
+                            </span>
+                        </div>
+                        <h3>Олімпійська перспектива</h3>
+                        <p>У 2028 році флаг-футбол дебютує на Олімпіаді в Лос-Анджелесі. Почни свій шлях уже зараз.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="community section-dark" id="community">
+            <div class="community-overlay"></div>
+            <div class="container community-layout">
+                <div class="community-copy reveal">
+                    <p class="eyebrow">Більше ніж команда</p>
+                    <h2 class="section-title">Тут ти стаєш<br>частиною зграї</h2>
+                    <p>У нас не потрібно доводити, що ти «вже готовий». Приходь таким, як є — тренери допоможуть
+                        знайти твою позицію та темп.</p>
+                    <a class="text-link" href="#form">
+                        Спробувати тренування
+                        <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="m9 5 7 7-7 7" /></svg>
+                    </a>
+                </div>
+
+                <div class="why-us-list">
+                    <article class="why-us-item reveal">
+                        <span>01</span>
+                        <div>
+                            <h3>Тренери збірної України</h3>
+                            <p>Навчайся в людей із досвідом найвищого рівня.</p>
+                        </div>
+                    </article>
+                    <article class="why-us-item reveal">
+                        <span>02</span>
+                        <div>
+                            <h3>Турніри в Україні та Європі</h3>
+                            <p>Тренуйся заради реальної гри, емоцій і перемог.</p>
+                        </div>
+                    </article>
+                    <article class="why-us-item reveal">
+                        <span>03</span>
+                        <div>
+                            <h3>Люди, які підтримують</h3>
+                            <p>Команда, нові друзі й відчуття, що ти на своєму місці.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="lead-form" id="form" aria-labelledby="form-title">
+            <div class="container form-layout">
+                <div class="form-intro reveal">
+                    <p class="eyebrow">Перший крок — найпростіший</p>
+                    <h2 class="section-title" id="form-title">Твоє перше тренування — за наш рахунок</h2>
+                    <p class="form-intro-text">Залиш контакт — тренер зателефонує, підбере вікову групу й відповість на
+                        всі питання.</p>
+                    <ul class="form-benefits" aria-label="Що буде після заявки">
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg>
+                            Дзвінок протягом доби
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg>
+                            Без зобов’язань і прихованих платежів
+                        </li>
+                        <li>
+                            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg>
+                            Підійде, навіть якщо ніколи не грав
+                        </li>
+                    </ul>
+                    <div class="coach-contact">
+                        <span>Хочеш швидше?</span>
+                        <a href="tel:+380635744841">+38 (063) 574-48-41</a>
+                    </div>
+                </div>
+
+                <div class="form-card reveal" id="signup">
+                    <div class="form-card-header">
+                        <span class="form-step">01</span>
+                        <p>Залиш свої контакти</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">Твоє ім’я</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Наприклад, Андрій"
+                                autocomplete="name" minlength="2" required aria-describedby="nameError">
+                            <p class="field-error" id="nameError" aria-live="polite"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Номер телефону</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+380 63 123 45 67"
+                                autocomplete="tel" inputmode="tel" required aria-describedby="phoneHint phoneError">
+                            <p class="field-hint" id="phoneHint">Формат: +380 XX XXX XX XX</p>
+                            <p class="field-error" id="phoneError" aria-live="polite"></p>
+                        </div>
+
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            <span>Записатися на тренування</span>
+                            <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path d="m9 5 7 7-7 7" /></svg>
+                        </button>
+                        <p class="form-privacy">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><rect x="5" y="10" width="14" height="11" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>
+                            Дані побачить лише тренер. Жодного спаму.
+                        </p>
+                    </form>
+
+                    <div class="success-message" id="successMessage" role="status" aria-live="polite" tabindex="-1">
+                        <span class="success-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg>
+                        </span>
+                        <p class="eyebrow">Готово</p>
+                        <h3>Заявка вже у тренера</h3>
+                        <p>Очікуй дзвінка протягом доби. До зустрічі на полі!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section-light" id="faq">
+            <div class="container faq-layout">
+                <div class="faq-heading reveal">
+                    <p class="eyebrow eyebrow-dark">Усе, що варто знати</p>
+                    <h2 class="section-title">Короткі відповіді на чесні питання</h2>
+                    <p>Не знайшов відповіді? Зателефонуй — тренер усе пояснить без зайвого тиску.</p>
+                    <a class="text-link text-link-dark" href="tel:+380635744841">Поставити питання тренеру</a>
+                </div>
+
+                <div class="faq-list reveal">
+                    <details class="faq-item" open>
+                        <summary>Що таке флаг-футбол?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p>Це безконтактна версія американського футболу. Замість силового захвату гравець знімає прапорець із поясу суперника. Тут важливі швидкість, тактика й командна взаємодія.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Я ніколи не грав. Це проблема?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p><strong>Зовсім ні.</strong> Більшість гравців починали з нуля. Ми навчимо правилам, техніці та допоможемо поступово ввійти в темп.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Скільки це коштує?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p><strong>Перше тренування — безкоштовно.</strong> Далі є клубні внески на оренду поля та обладнання. Точну суму тренер пояснить під час дзвінка.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Де проходять тренування?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p>Основна локація — <a href="https://maps.app.goo.gl/BGMe148HAD4Cwvxc9" target="_blank" rel="noopener noreferrer">стадіон школи №35 у Вінниці</a>.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Який графік тренувань?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p>Графік залежить від вікової групи. Зазвичай тренування проходять у будні ввечері та у вихідні зранку. Актуальний час підкаже тренер.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Дівчата теж можуть грати?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p><strong>Так.</strong> Флаг-футбол підходить усім. У клубі є змішані команди, і ми раді кожному, хто хоче спробувати.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Що взяти із собою?<span aria-hidden="true"></span></summary>
+                        <div class="faq-answer"><p>Спортивний одяг, кросівки та воду. Необхідний для першого тренування інвентар ми надамо.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
-            <h2 class="footer-title">Залишились питання? Телефонуй прямо зараз!</h2>
-
-            <div class="footer-content">
-                <div class="footer-contact">
-                    <a href="tel:+380XXXXXXXXX" class="footer-phone">
-                        📞 +380635744841
-                    </a>
-                    <a href="https://maps.app.goo.gl/BGMe148HAD4Cwvxc9" target="_blank" class="footer-address"
-                        style="text-decoration: none; color: inherit; transition: color 0.3s;">
-                        📍 Вінниця, Стадіон школи №35
-                    </a>
-                </div>
-
-                <div class="footer-social">
-                    <p class="footer-social-title">📱 Ми в соцмережах:</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/vinwolves" target="_blank" class="social-link">
-                            Instagram 🐺
-                        </a>
-                        <a href="https://t.me/vinnytsiawolves" target="_blank" class="social-link">
-                            Telegram ⚡
-                        </a>
-                        <a href="https://www.facebook.com/vinnytsiawolves" target="_blank" class="social-link">
-                            Facebook 🏈
-                        </a>
-                    </div>
-                </div>
+            <div class="footer-cta reveal">
+                <p class="eyebrow">Готовий вийти на поле?</p>
+                <h2>Вовки не полюють поодинці.</h2>
+                <a class="btn btn-primary btn-large" href="#form">Приєднатися до зграї</a>
             </div>
 
-            <div class="footer-slogan">
-                🐺 Вовки не полюють поодинці. Приєднуйся до зграї! 🔥
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <a href="#hero" class="logo" aria-label="Вінницькі Вовки — на початок сторінки">
+                        <img src="images/logo.PNG" alt="" class="logo-img" width="52" height="52" loading="lazy">
+                        <span class="logo-copy"><strong>Вінницькі Вовки</strong><small>Flag football club</small></span>
+                    </a>
+                    <p>Флаг-футбол у Вінниці для дітей і дорослих. Тренуємо характер, швидкість і командну гру.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Контакти</h3>
+                    <a href="tel:+380635744841">+38 (063) 574-48-41</a>
+                    <a href="https://maps.app.goo.gl/BGMe148HAD4Cwvxc9" target="_blank" rel="noopener noreferrer">Стадіон школи №35, Вінниця</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Соцмережі</h3>
+                    <a href="https://instagram.com/vinwolves" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://t.me/vinnytsiawolves" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    <a href="https://www.facebook.com/vinnytsiawolves" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
             </div>
 
             <div class="partners-strip">
-                <h3 class="partners-title">Наші партнери</h3>
+                <p class="partners-title">За підтримки партнерів</p>
                 <div class="partners-grid">
-                    <img src="images/partners/city-council.svg" alt="Вінницька міська рада" class="partner-logo">
-                    <img src="images/partners/region-admin.png" alt="Вінницька обласна адміністрація"
-                        class="partner-logo">
-                    <img src="images/partners/sport-committee.jpg" alt="Спортивний комітет" class="partner-logo">
-                    <img src="images/partners/fhu.jpg" alt="ФХУ" class="partner-logo">
-                    <img src="images/partners/grosh.png" alt="ГРОШ" class="partner-logo">
-                    <img src="images/partners/pizza.png" alt="Express Pizza" class="partner-logo">
-                    <img src="images/partners/magik.png" alt="Магік" class="partner-logo">
-                    <img src="images/partners/solodka-mriya.png" alt="Солодка Мрія" class="partner-logo">
-                    <img src="images/partners/ecosphere.jpg" alt="Ecosphere" class="partner-logo">
-                    <img src="images/partners/partner-media.png" alt="Partner Media" class="partner-logo">
+                    <img src="images/partners/city-council.svg" alt="Вінницька міська рада" class="partner-logo" loading="lazy">
+                    <img src="images/partners/region-admin.png" alt="Вінницька обласна адміністрація" class="partner-logo" loading="lazy">
+                    <img src="images/partners/sport-committee.jpg" alt="Спортивний комітет" class="partner-logo" loading="lazy">
+                    <img src="images/partners/fhu.jpg" alt="ФХУ" class="partner-logo" loading="lazy">
+                    <img src="images/partners/grosh.png" alt="ГРОШ" class="partner-logo" loading="lazy">
+                    <img src="images/partners/pizza.png" alt="Express Pizza" class="partner-logo" loading="lazy">
+                    <img src="images/partners/magik.png" alt="Магік" class="partner-logo" loading="lazy">
+                    <img src="images/partners/solodka-mriya.png" alt="Солодка Мрія" class="partner-logo" loading="lazy">
+                    <img src="images/partners/ecosphere.jpg" alt="Ecosphere" class="partner-logo" loading="lazy">
+                    <img src="images/partners/partner-media.png" alt="Partner Media" class="partner-logo" loading="lazy">
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Вінницькі Вовки. Слава Україні! 🇺🇦</p>
+                <p>&copy; 2026 Вінницькі Вовки</p>
+                <p>Слава Україні!</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <a class="mobile-cta" href="#signup">
+        <span><small>Перше тренування</small>Безкоштовно</span>
+        <strong>Записатися <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="m9 5 7 7-7 7" /></svg></strong>
+    </a>
+
+    <script src="script.js?v=3"></script>
 </body>
 
 </html>
