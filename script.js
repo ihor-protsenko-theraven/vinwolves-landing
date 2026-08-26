@@ -59,12 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const revealElements = document.querySelectorAll('.reveal');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const compactViewport = window.matchMedia('(max-width: 800px)').matches;
-    const saveData = Boolean(navigator.connection?.saveData);
     const heroVideo = document.querySelector('.hero-video');
     const heroVideoSource = heroVideo?.querySelector('source[data-src]');
 
-    if (!reduceMotion && !compactViewport && !saveData && heroVideo && heroVideoSource) {
+    if (!reduceMotion && heroVideo && heroVideoSource) {
         heroVideoSource.src = heroVideoSource.dataset.src;
         heroVideo.load();
         heroVideo.play().catch(() => {
